@@ -1,0 +1,33 @@
+{
+  "name": "profile-overview",
+  "version": "1.0.0",
+  "private": true,
+  "description": "profile-overview",
+  "author": "Kerim Rahman",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^2.3.0",
+    "babel-plugin-styled-components": "^2.1.4",
+    "gatsby": "^5.12.4",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-mdx": "^5.12.0",
+    "gatsby-plugin-styled-components": "^6.12.0",
+    "gatsby-source-filesystem": "^5.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}

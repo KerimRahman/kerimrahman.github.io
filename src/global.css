@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Bungee Inline', cursive;
+    background: #0A1117;
+    color: #ffffff;
+}
