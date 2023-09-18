@@ -3,10 +3,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Profile Overview`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `krmrhmn`,
+    siteUrl: `https://kerimrahman.github.io/`
   },
-  pathPrefix: '/profile-overview',
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-mdx", {
