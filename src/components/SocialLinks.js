@@ -36,6 +36,7 @@ const Link = styled.a`
   border-radius: 2rem;
   border: 2px solid #2A3744;
   background: #121E28;
+  overflow: hidden;
 
   &:hover {
     border-color: #2e3f4f;
