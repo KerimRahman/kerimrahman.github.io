@@ -1,8 +1,8 @@
 {
-  "name": "profile-overview",
+  "name": "krmrhmn-github",
   "version": "1.0.0",
   "private": true,
-  "description": "profile-overview",
+  "description": "Profile Overview",
   "author": "Kerim Rahman",
   "keywords": [
     "gatsby"
@@ -12,8 +12,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
@@ -26,8 +25,5 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.8"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.0.0"
   }
 }
