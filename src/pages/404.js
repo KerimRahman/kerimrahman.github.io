@@ -1,48 +1,41 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import * as React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+    <Section>
+      <h1>Page not found!</h1>
+      <p>
+        Sorry 😔,
         <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
+        we couldn’t find what you were looking for.
       </p>
-    </main>
+      <StyledLink to="/">Go home</StyledLink>
+    </Section>
   )
 }
 
-export default NotFoundPage
+const Section = styled.main`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+`;
 
-export const Head = () => <title>Not found</title>
+const StyledLink = styled(Link)`
+  color: #965EF4;
+  text-underline-offset: 0.2rem;
+  
+  &:hover, &:active {
+    color: #8247E5;
+    text-underline-offset: 0.1rem;
+  }
+`;
+
+export default NotFoundPage;
+
+export const Head = () => <title>Not found</title>;
