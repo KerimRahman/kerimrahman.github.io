@@ -8,3 +8,18 @@
     Gatsby Minimal Starter
   </a>
 </h2>
+
+<h3 align="center">
+  Contact me:
+</h3>
+<p align="center">
+  <a href="https://kerimrahman.github.io/">
+    <img src="src/images/github.svg" width="48" alt="GitHub" />
+  </a>
+  <a href="https://kerimrahman.github.io/" style="margin: 0 10px;">
+    <img src="src/images/gitlab.svg" width="48" alt="GitLab" />
+  </a>
+  <a href="https://kerimrahman.github.io/">
+    <img src="src/images/linkedin.svg" width="48" alt="LinkedIn" />
+  </a>
+</p>
