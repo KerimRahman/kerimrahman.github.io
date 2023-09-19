@@ -17,6 +17,18 @@ module.exports = {
       __key: "pages"
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Kerim Rahman`,
+        short_name: `krmrhmn`,
+        start_url: `/`,
+        background_color: `#0A1117`,
+        theme_color: `#121E28`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
