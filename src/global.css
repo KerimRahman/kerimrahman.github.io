@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    font-size: 16px;
     min-height: 100vh;
     font-family: 'Bungee Inline', cursive;
     background: #0A1117;
