@@ -8,6 +8,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
+    "gatsby-source-hnapi",
     "gatsby-plugin-mdx", {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -32,7 +33,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          'Bungee Inline'
+          'Bungee Inline',
+          `Montserrat\:400,700`,
         ],
         // display: 'swap'
       }

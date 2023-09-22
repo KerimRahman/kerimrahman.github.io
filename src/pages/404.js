@@ -38,4 +38,4 @@ const StyledLink = styled(Link)`
 
 export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>;
+export const Head = () => <title>Kerim Rahman (Front End Dev) | Not found</title>;

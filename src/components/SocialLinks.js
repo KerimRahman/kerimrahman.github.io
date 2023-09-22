@@ -24,6 +24,10 @@ const LinksContainer = styled.ul`
   justify-content: center;
   gap: 3rem;
   list-style: none;
+
+  @media only screen and (max-width: 600px) {
+    gap: 1rem;
+  }
 `;
 
 const LinkItem = styled.li`
@@ -46,11 +50,21 @@ const Link = styled.a`
   border: 2px solid #2A3744;
   background: #121E28;
   overflow: hidden;
+
+  @media only screen and (max-width: 600px) {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 1.5rem;
+  }
   
   img {
-    filter: blur(0.25rem);
+    filter: ${props => `drop-shadow(0px 0px 2rem ${props?.$shadowColor || '#2A3744'})`};
     transform: scale(0.95);
     transition: ease-in-out all 0.3s;
+
+    @media only screen and (min-width: 768px) {
+      filter: blur(0.25rem);
+    }
   }
 
   &:hover {
