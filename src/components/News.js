@@ -46,7 +46,7 @@ const News = ({ list = [] }) => {
 const getDateTime = (seconds) => {
   const datetime  = DateTime.fromSeconds(seconds);
 
-  if (datetime.isValid) return datetime.toFormat('yyyy LLL dd, HH:mm');
+  if (datetime.isValid) return datetime.toUTC().toFormat('yyyy LLL dd, HH:mm');
 
   return null;
 };
