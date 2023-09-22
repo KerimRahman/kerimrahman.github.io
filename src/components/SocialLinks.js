@@ -57,7 +57,7 @@ const SOCIAL_LINKS = [
   {
     name: 'GitHub',
     img: GitHubIcon,
-    url: 'https://kerimrahman.github.io/',
+    url: 'https://github.com/KerimRahman',
     shadowColor: '#00bcd4',
   },
   {
