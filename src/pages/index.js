@@ -21,14 +21,12 @@ const IndexPage = () => {
     `
   );
 
-  console.log('allHnLatestStories: ', allHnLatestStories);
-
   return (
     <Main>
-      <MainSection>
+      <Section>
         <Title>krmrhmn.</Title>
         <SocialLinks />
-      </MainSection>
+      </Section>
       <NewsWidget list={allHnLatestStories?.nodes} />
     </Main>
   );
@@ -49,9 +47,13 @@ const Main = styled.main`
 
 const Title = styled.h1`
   font-size: 3rem;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
-const MainSection = styled.section`
+const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,6 +61,10 @@ const MainSection = styled.section`
   gap: 5rem;
   height: 100vh;
   scroll-snap-align: center;
+
+  @media only screen and (max-width: 600px) {
+    gap: 2rem;
+  }
 `;
 
 export default IndexPage;
