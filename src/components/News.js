@@ -14,7 +14,7 @@ const NewsWidget = ({ list = [] }) => {
 };
 
 const News = ({ list = [] }) => {
-  if (!list.length) return <strong>No news!</strong>;
+  if (!list.length) return <Caption>No news!</Caption>;
 
   return (
     <Container>
@@ -51,41 +51,44 @@ const getDateTime = (seconds) => {
   return null;
 };
 
-const NewsSection = styled.div`
-  position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 20rem;
+const NewsSection = styled.section`
+  position: static;
+  height: 100vh;
+  scroll-snap-align: center;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 `;
 
 const NewsSectionInner = styled.div`
-  flex: 1;
+  width: 100%;
+  padding: 2rem 0;
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 `;
 
 const Container = styled.ul`
+  font-family: 'Montserrat', sans-serif;
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
   gap: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
+  
+  li {
+    flex-shrink: 0;
+    max-width: 15rem;
+  }
 `;
 
 const Item = styled.a`
   display: block;
+  height: 100%;
   text-decoration: none;
   font-size: 0.75rem;
   padding: 1rem;
