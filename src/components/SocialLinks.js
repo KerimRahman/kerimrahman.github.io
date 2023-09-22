@@ -9,8 +9,8 @@ const SocialLinks = () => {
     <LinksContainer>
       {
         SOCIAL_LINKS.map((link) => (
-          <Link shadowColor={link.shadowColor} key={link.name} href={link.url} target="_blank" rel="norefferer noopener">
-            <Image shadowColor={link.shadowColor} src={link.img} alt={`${link.name} Icon`} />
+          <Link $shadowColor={link.shadowColor} key={link.name} href={link.url} target="_blank" rel="norefferer noopener">
+            <Image $shadowColor={link.shadowColor} src={link.img} alt={`${link.name} Icon`} />
           </Link>
         ))
       }
@@ -44,13 +44,13 @@ const Link = styled.a`
   }
 
   &:active {
-    border-color: ${props => `${props?.shadowColor || '#2A3744'}`};
+    border-color: ${props => `${props?.$shadowColor || '#2A3744'}`};
     background: #121E28DD;
   }
 `;
 
 const Image = styled.img`
-  filter: ${props => `drop-shadow(0px 0px 2rem ${props?.shadowColor || '#2A3744'})`};
+  filter: ${props => `drop-shadow(0px 0px 2rem ${props?.$shadowColor || '#2A3744'})`};
 `;
 
 const SOCIAL_LINKS = [
