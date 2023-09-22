@@ -4,24 +4,33 @@ import GitHubIcon from '../images/github.svg';
 import GitLabIcon from '../images/gitlab.svg';
 import LinkedInIcon from '../images/linkedin.svg';
 
-const SocialLinks = () => {
-  return (
-    <LinksContainer>
-      {
-        SOCIAL_LINKS.map((link) => (
-          <Link shadowColor={link.shadowColor} key={link.name} href={link.url} target="_blank" rel="norefferer noopener">
-            <Image shadowColor={link.shadowColor} src={link.img} alt={`${link.name} Icon`} />
+const SocialLinks = () => (
+  <LinksContainer>
+    {
+      SOCIAL_LINKS.map((link) => (
+        <LinkItem key={link.name}>
+          <Link $shadowColor={link.shadowColor} href={link.url} target="_blank" rel="norefferer noopener">
+            <img src={link.img} alt={`${link.name} Icon`} />
           </Link>
-        ))
-      }
-    </LinksContainer>
-  )
-}
+          <LinkTitle>{link.name}</LinkTitle>
+        </LinkItem>
+      ))
+    }
+  </LinksContainer>
+);
 
-const LinksContainer = styled.div`
+const LinksContainer = styled.ul`
   display: flex;
   justify-content: center;
   gap: 3rem;
+  list-style: none;
+`;
+
+const LinkItem = styled.li`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
 `;
 
 const Link = styled.a`
@@ -37,20 +46,31 @@ const Link = styled.a`
   border: 2px solid #2A3744;
   background: #121E28;
   overflow: hidden;
+  
+  img {
+    filter: blur(0.25rem);
+    transform: scale(0.95);
+    transition: ease-in-out all 0.3s;
+  }
 
   &:hover {
     border-color: #2e3f4f;
     background: #121E28EA;
+    
+    img {
+      transform: scale(1);
+      filter: ${props => `drop-shadow(0px 0px 2rem ${props?.$shadowColor || '#2A3744'})`};
+    }
   }
 
   &:active {
-    border-color: ${props => `${props?.shadowColor || '#2A3744'}`};
+    border-color: ${props => `${props?.$shadowColor || '#2A3744'}`};
     background: #121E28DD;
   }
 `;
 
-const Image = styled.img`
-  filter: ${props => `drop-shadow(0px 0px 2rem ${props?.shadowColor || '#2A3744'})`};
+const LinkTitle = styled.strong`
+  font-size: 1rem;
 `;
 
 const SOCIAL_LINKS = [

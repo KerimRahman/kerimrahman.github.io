@@ -13,13 +13,13 @@
   Contact me:
 </h3>
 <p align="center">
-  <a href="https://kerimrahman.github.io/">
+  <a href="https://kerimrahman.github.io/" style="text-decoration: none;">
     <img src="src/images/github.svg" width="48" alt="GitHub" />
   </a>
-  <a href="https://kerimrahman.github.io/" style="margin: 0 10px;">
+  <a href="https://kerimrahman.github.io/" style="margin: 0 10px; text-decoration: none;">
     <img src="src/images/gitlab.svg" width="48" alt="GitLab" />
   </a>
-  <a href="https://kerimrahman.github.io/">
+  <a href="https://kerimrahman.github.io/" style="text-decoration: none;">
     <img src="src/images/linkedin.svg" width="48" alt="LinkedIn" />
   </a>
 </p>
